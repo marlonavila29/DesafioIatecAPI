@@ -1,0 +1,29 @@
+<form>
+    <h1>CRIANDO NOVA VENDA</h1>
+    
+    <mat-form-field appearance="fill" class="select">
+        <mat-label>Itens à Venda</mat-label>
+        <mat-select [(ngModel)]="itemSelected" [formControl]="toppingsItensVenda" multiple>
+          <mat-select-trigger>
+            {{toppingsItensVenda.value?.[0] || ''}}
+            <span *ngIf="(toppingsItensVenda.value?.length || 0) > 1" class="form">
+              (+{{(toppingsItensVenda.value?.length || 0) - 1}} {{toppingsItensVenda.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+          </mat-select-trigger>
+          <mat-option *ngFor="let item of itensAVenda" [value]="item">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="select1">
+        <mat-label>Selecione um Vendedor</mat-label>
+        <mat-select [(ngModel)]="id_vendedorSelected" name="vendedor">
+          <mat-option *ngFor="let vendedor of vendedores" [value]="vendedor.id">{{vendedor.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="create()" class="mat-elevation-z8" mat-stroked-button color="primary"> CRIAR </button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn"> CANCELAR </button>
+    </div>
+
+</form>

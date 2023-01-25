@@ -1,0 +1,18 @@
+<form>
+    <h1>CRIANDO NOVO VENDEDOR</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="vendedor.name" type="text" name="nome">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>CPF</mat-label>
+        <textarea matInput [(ngModel)]="vendedor.cpf" type="text" name="cpf"></textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="create()" class="mat-elevation-z8" mat-stroked-button color="primary"> CRIAR </button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn"> CANCELAR </button>
+    </div>
+
+</form>

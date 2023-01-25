@@ -1,0 +1,40 @@
+form {
+    text-align: center;
+    width: 70%;
+    margin: 2rem auto 0 auto;
+    padding-right: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.form {
+    width: 100%;
+}
+
+.select1 {
+    margin-left: 0.5rem;
+    width: 48.9%;
+}
+.select {
+    width: 50%;
+}
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+    
+  }
+
+.buttons {
+    width: 100%;
+    text-align: start;
+}
+
+button {
+    margin-right: .5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}

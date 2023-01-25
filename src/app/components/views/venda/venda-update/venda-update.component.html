@@ -1,0 +1,16 @@
+<form>
+    <h1>ATUALIZANDO A VENDA</h1>
+
+    <mat-form-field appearance="fill" class="select1">
+        <mat-label>Altere o Status da Venda</mat-label>
+        <mat-select [(ngModel)]="novoStatus" name="status">
+          <mat-option *ngFor="let status of listaStatus" [value]="status">{{status}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="update()" class="mat-elevation-z8" mat-stroked-button color="primary"> Atualizar Venda </button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn"> CANCELAR </button>
+    </div>
+
+</form>
